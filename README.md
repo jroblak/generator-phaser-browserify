@@ -21,7 +21,7 @@ Check out [this test game](https://github.com/jroblak/sagdc2014) as an example o
 
 + Invoke the generator:
 
-  `yo phaser`
+  `yo phaser-browserify`
 
 + Run a local development server (livereload, watchify enabled) with this command:
 
