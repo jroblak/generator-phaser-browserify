@@ -21,7 +21,7 @@ Preloader.prototype = {
   },
 
   update: function () {
-    if (!this.ready) {
+    if (!!this.ready) {
       this.game.state.start('Menu');
     }
   },

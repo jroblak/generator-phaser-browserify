@@ -49,12 +49,15 @@ gulp.task('copylibs', ['clean'], function () {
 });
 
 gulp.task('compile', ['clean'], function () {
-  var bundleMethod = watching ? watchify : browserify;
-  var bundler = bundleMethod({ entries: [paths.entry] });
+  var bundler = browserify({
+    cache: {}, packageCache: {}, fullPaths: true,
+    entries: [paths.entry],
+    debug: watching
+  });
 
   var bundlee = function() {
     return bundler
-      .bundle({ debug: watching })
+      .bundle()
       .pipe(source('main.min.js'))
       .pipe(jshint('.jshintrc'))
       .pipe(jshint.reporter('default'))
@@ -64,6 +67,7 @@ gulp.task('compile', ['clean'], function () {
   };
 
   if (watching) {
+    bundler = watchify(bundler);
     bundler.on('update', bundlee)
   }
 
