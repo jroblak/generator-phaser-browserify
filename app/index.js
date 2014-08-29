@@ -51,7 +51,7 @@ var PhaserGenerator = yeoman.generators.Base.extend({
   projectfiles: function () {
     this.copy('gitignore', '.gitignore');
 
-    this.copy('src/assets/player.png', 'src/assets/test.png');
+    this.copy('src/assets/test.png', 'src/assets/test.png');
     this.copy('src/assets/preloader.gif', 'src/assets/preloader.gif');
     this.copy('src/css/main.css', 'src/css/main.css');
     
