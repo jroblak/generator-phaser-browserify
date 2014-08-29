@@ -1,0 +1,67 @@
+{
+  "name": "generator-phaser-browserify",
+  "version": "0.1.0",
+  "description": "A Yeoman generator to generate HTML5 games with phaser.js using Gulp and Browserify",
+  
+  "keywords": [
+    "yeoman-generator",
+    "phaser",
+    "yeoman-generator-gulp",
+    "phaser gulp",
+    "phaser browserify"
+  ],
+  
+  "homepage": "https://github.com/jroblak/generator-phaser-browserify",
+  "bugs": "https://github.com/jroblak/generator-phaser-browserify/issues",
+  
+  "author": {
+    "name": "Justin Oblak",
+    "email": "j@justinoblak.com",
+    "url": "http://justinoblak.com"
+  },
+  
+  "contributors": [{
+    "name": "Justin Oblak",
+    "email": "j@justinoblak.com",
+    "url": "http://justinoblak.com"
+  }],
+
+  "main": "app/index.js",
+
+  "files": [
+    "app"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jroblak/generator-phaser-browserify.git"
+  },
+
+  "scripts": {
+    "test": "mocha"
+  },
+
+  "dependencies": {
+    "yeoman-generator": "~0.16.0",
+    "chalk": "~0.4.0"
+  },
+  
+  "devDependencies": {
+    "mocha": "*"
+  },
+
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
+
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
