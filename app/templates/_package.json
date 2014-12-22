@@ -1,5 +1,5 @@
 {
-  "name": "spy",
+  "name": "<%= _.slugify(projectName) %>",
   "description": "",
   "readme": "",
   "repository": "",
