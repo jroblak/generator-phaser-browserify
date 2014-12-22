@@ -27,7 +27,7 @@ paths = {
   ],
   js:     ['src/js/*.js', 'src/js/**/*.js'],
   entry: './src/js/main.js',
-  dist:   './dist/'
+  dist:   './dist/**'
 };
 
 gulp.task('clean', function () {
