@@ -14,7 +14,6 @@ var gulp = require('gulp')
   , browserify = require('browserify')
   , watchify = require('watchify')
   , gulpif = require('gulp-if')
-  , vinylPaths = require('vinyl-paths')
   , paths;
 
 var watching = false;
