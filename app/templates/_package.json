@@ -1,5 +1,5 @@
 {
-  "name": "<%= _.slugify(projectName) %>",
+  "name": "spy",
   "description": "",
   "readme": "",
   "repository": "",
@@ -27,7 +27,8 @@
     "vinyl-source-stream": "*",
     "gulp-streamify": "*",
     "watchify": "*",
-    "gulp-if": "*"
+    "gulp-if": "*",
+    "vinyl-paths": "*"
   },
 
   "scripts": {

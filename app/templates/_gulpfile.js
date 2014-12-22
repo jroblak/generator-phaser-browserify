@@ -14,6 +14,7 @@ var gulp = require('gulp')
   , browserify = require('browserify')
   , watchify = require('watchify')
   , gulpif = require('gulp-if')
+  , vinylPaths = require('vinyl-paths')
   , paths;
 
 var watching = false;
@@ -26,11 +27,13 @@ paths = {
   ],
   js:     ['src/js/*.js', 'src/js/**/*.js'],
   entry: './src/js/main.js',
-  dist:   './dist/**'
+  dist:   './dist/'
 };
 
 gulp.task('clean', function () {
-	del([paths.dist]);
+	return gulp.src(paths.dist)
+    .pipe(vinylPaths(del))
+    .on('error', gutil.log);
 });
 
 gulp.task('copy', ['clean'], function () {
