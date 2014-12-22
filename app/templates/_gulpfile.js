@@ -31,9 +31,7 @@ paths = {
 };
 
 gulp.task('clean', function () {
-  return gulp.src(paths.dist, {read: false})
-    .pipe(vinylPaths(del))
-    .on('error', gutil.log);
+	del([paths.dist]);
 });
 
 gulp.task('copy', ['clean'], function () {
