@@ -27,7 +27,8 @@
     "vinyl-source-stream": "*",
     "gulp-streamify": "*",
     "watchify": "*",
-    "gulp-if": "*"
+    "gulp-if": "*",
+    "vinyl-paths": "*"
   },
 
   "scripts": {

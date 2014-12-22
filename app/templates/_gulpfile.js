@@ -14,6 +14,7 @@ var gulp = require('gulp')
   , browserify = require('browserify')
   , watchify = require('watchify')
   , gulpif = require('gulp-if')
+  , vinylPaths = require('vinyl-paths')
   , paths;
 
 var watching = false;
@@ -31,7 +32,7 @@ paths = {
 
 gulp.task('clean', function () {
   return gulp.src(paths.dist, {read: false})
-    .pipe(del({ force: true }))
+    .pipe(vinylPaths(del))
     .on('error', gutil.log);
 });
 
