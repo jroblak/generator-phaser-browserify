@@ -11,7 +11,7 @@
     "bower": "*",
     "gulp": "*",
     "gulp-util": "*",
-    "gulp-rimraf": "*",
+    "del": "*",
     "gulp-concat": "*",
     "gulp-download": "*",
     "gulp-rename": "*",
