@@ -1,6 +1,6 @@
 {
   "name": "generator-phaser-browserify",
-  "version": "0.1.1",
+  "version": "0.3.6",
   "description": "A Yeoman generator to generate HTML5 games with phaser.js using Gulp and Browserify",
   
   "keywords": [

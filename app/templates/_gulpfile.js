@@ -1,6 +1,6 @@
 var gulp = require('gulp')
   , gutil = require('gulp-util')
-  , rimraf = require('gulp-rimraf')
+  , del = require('del')
   , concat = require('gulp-concat')
   , rename = require('gulp-rename')
   , minifycss = require('gulp-minify-css')
@@ -14,6 +14,7 @@ var gulp = require('gulp')
   , browserify = require('browserify')
   , watchify = require('watchify')
   , gulpif = require('gulp-if')
+  , vinylPaths = require('vinyl-paths')
   , paths;
 
 var watching = false;
@@ -30,8 +31,8 @@ paths = {
 };
 
 gulp.task('clean', function () {
-  return gulp.src(paths.dist, {read: false})
-    .pipe(rimraf({ force: true }))
+	return gulp.src(paths.dist)
+    .pipe(vinylPaths(del))
     .on('error', gutil.log);
 });
 
@@ -68,7 +69,7 @@ gulp.task('compile', ['clean'], function () {
 
   if (watching) {
     bundler = watchify(bundler);
-    bundler.on('update', bundlee)
+    bundler.on('update', bundlee);
   }
 
   return bundlee();
