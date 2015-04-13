@@ -87,9 +87,8 @@ gulp.task('minifycss', ['clean'], function () {
 
 gulp.task('processhtml', ['clean'], function() {
   return gulp.src('src/index.html')
-    .pipe(processhtml('index.html'))
-    .pipe(gulp.dest(paths.dist))
-    .on('error', gutil.log);
+    .pipe(processhtml({}))
+    .pipe(gulp.dest(paths.dist));
 });
 
 gulp.task('minifyhtml', ['processhtml'], function() {
