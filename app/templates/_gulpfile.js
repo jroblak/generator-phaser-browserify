@@ -23,7 +23,7 @@ paths = {
   assets: 'src/assets/**/*',
   css:    'src/css/*.css',
   libs:   [
-    './src/bower_components/phaser-official/build/phaser.js'
+    './node_modules/phaser/dist/phaser.js'
   ],
   js:     ['src/js/*.js', 'src/js/**/*.js'],
   entry: './src/js/main.js',
