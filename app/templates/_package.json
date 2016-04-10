@@ -22,6 +22,7 @@
     "gulp-uglify": "*",
     "gulp-connect": "*",
     "gulp-watch": "*",
+    "jshint": "^2.9.1",
     "browserify": "*",
     "tiny-lr": "*",
     "vinyl-source-stream": "*",
